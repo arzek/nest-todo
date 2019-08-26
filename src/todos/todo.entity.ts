@@ -8,6 +8,6 @@ export class TodoEntity {
   @Column('text')
   name: string;
 
-  @Column('boolean')
+  @Column('boolean', { default: false })
   status: boolean;
 }
