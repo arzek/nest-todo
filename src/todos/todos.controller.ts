@@ -20,6 +20,12 @@ export class TodosController {
     return this.todoService.create(createTodoDto);
   }
 
+  @Get(':id')
+  @ApiImplicitParam({ name: 'id' })
+  getById(@Param() params): Promise<TodoEntity> {
+    return this.todoService.getById(params.id);
+  }
+
   @Put(':id')
   @ApiImplicitParam({ name: 'id' })
   update(

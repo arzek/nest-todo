@@ -12,6 +12,10 @@ export class TodosService {
     private readonly todoRepository: Repository<TodoEntity>,
   ) {}
 
+  getById(id: number): Promise<TodoEntity> {
+    return this.todoRepository.findOne(id);
+  }
+
   findAll(): Promise<TodoEntity[]> {
     return this.todoRepository.find();
   }
