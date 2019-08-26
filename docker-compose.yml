@@ -1,0 +1,11 @@
+version: '3'
+services:
+  postgres:
+      image: postgres
+      container_name: postgres
+      environment:
+        POSTGRES_PASSWORD: 123
+        POSTGRES_USER: nest
+        POSTGRES_DB: nest-todo
+      ports:
+        - '5433:5432'
