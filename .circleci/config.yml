@@ -14,7 +14,7 @@ jobs:
         environment:
           POSTGRES_USER: nest
           POSTGRES_PASSWORD: 123
-          POSTGRES_DB: nest-todos
+          POSTGRES_DB: nest-todo
 
     steps:
       - checkout
